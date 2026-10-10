@@ -1,0 +1,1 @@
+- Package the existing static website with scripts/build.mjs into dist, preserving classic JavaScript globals and image paths because inline HTML handlers depend on them.
