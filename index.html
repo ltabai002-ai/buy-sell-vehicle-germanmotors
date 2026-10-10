@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Motors — Sell Your Car at the Best Price</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <img src="image/WhatsApp Image 2026-08-29 at 1.01.24 PM.jpg" alt="German Motors Logo" class="navbar__logo-img" />
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#featured-cars">Featured Cars</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--primary navbar__cta">Get Free Quote</a>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg-overlay"></div>
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="hero__badge">🤝 Buy Verified Cars • Sell at Best Price • Zero Middleman</p>
+        <h1 class="hero__title">
+          Buy or Sell Your Car at the <span class="highlight">Right Price</span> — Direct &amp; Transparent
+        </h1>
+        <p class="hero__subtitle">
+          Whether you want to <strong>sell your car at maximum value</strong> or <strong>buy 100% health-verified cars</strong> in Guwahati — deal direct owner-to-buyer with zero dealer margin.
+        </p>
+        <div class="hero__actions">
+          <a href="#featured-cars" class="btn btn--primary btn--lg">🛒 Buy Verified Cars</a>
+          <a href="#contact" class="btn btn--outline btn--lg">🚗 Sell My Car</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main-flow">
+    <!-- ============ FEATURED CARS SHOWROOM (ELITE-STYLE) ============ -->
+    <section class="section featured-cars" id="featured-cars">
+    <div class="container">
+      <div class="featured-cars__top">
+        <div class="section__header featured-cars__header">
+          <p class="section__tag">Explore Inventory</p>
+          <p class="welcome-text">Welcome to</p>
+          <h2 class="section__title">German Motors <span class="highlight">Verified Collection</span></h2>
+          <p class="section__subtitle">
+            Premium pre-owned cars in Guwahati. Certified health checkup, 100% verified history, 
+            transparent pricing, and direct owner interaction.
+          </p>
+        </div>
+
+        <div class="cars-carousel__controls">
+          <button class="carousel-btn prev-btn" id="carPrevBtn" aria-label="Previous Cars">&#10094;</button>
+          <button class="carousel-btn next-btn" id="carNextBtn" aria-label="Next Cars">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="cars-carousel-wrapper">
+        <div class="cars-carousel" id="carsTrack">
+
+          <!-- Card 1 -->
+          <div class="car-card car-card-trigger" data-car-id="car1">
+            <div class="car-card__media">
+              <span class="car-card__badge">Verified Health</span>
+              <button class="car-card__bookmark" aria-label="Bookmark car" onclick="event.stopPropagation(); this.classList.toggle('bookmarked')">🔖</button>
+              <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=700&q=80" alt="2022 Hyundai Creta SX" class="car-card__img" />
+            </div>
+            <div class="car-card__body">
+              <div class="car-card__title-row">
+                <h3 class="car-card__name">2022 Hyundai Creta SX</h3>
+              </div>
+              <div class="car-card__tags">
+                <span class="tag">Petrol</span>
+                <span class="tag">Automatic</span>
+                <span class="tag tag--loc">AS (Assam)</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__pricing">
+                  <span class="car-price">₹12.85 Lakh</span>
+                  <span class="car-emi">EMI: ₹22,800 /m</span>
+                </div>
+                <button type="button" class="car-card__btn" onclick="event.stopPropagation(); openCarModal('car1')">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="car-card car-card-trigger" data-car-id="car2">
+            <div class="car-card__media">
+              <span class="car-card__badge">1st Owner</span>
+              <button class="car-card__bookmark" aria-label="Bookmark car" onclick="event.stopPropagation(); this.classList.toggle('bookmarked')">🔖</button>
+              <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=700&q=80" alt="2023 Volkswagen Virtus GT" class="car-card__img" />
+            </div>
+            <div class="car-card__body">
+              <div class="car-card__title-row">
+                <h3 class="car-card__name">2023 VW Virtus GT Plus</h3>
+              </div>
+              <div class="car-card__tags">
+                <span class="tag">Petrol</span>
+                <span class="tag">DSG Auto</span>
+                <span class="tag tag--loc">AS (Guwahati)</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__pricing">
+                  <span class="car-price">₹15.20 Lakh</span>
+                  <span class="car-emi">EMI: ₹26,950 /m</span>
+                </div>
+                <button type="button" class="car-card__btn" onclick="event.stopPropagation(); openCarModal('car2')">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="car-card car-card-trigger" data-car-id="car3">
+            <div class="car-card__media">
+              <span class="car-card__badge">Park &amp; Sell</span>
+              <button class="car-card__bookmark" aria-label="Bookmark car" onclick="event.stopPropagation(); this.classList.toggle('bookmarked')">🔖</button>
+              <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=700&q=80" alt="2021 BMW 3 Series 330i" class="car-card__img" />
+            </div>
+            <div class="car-card__body">
+              <div class="car-card__title-row">
+                <h3 class="car-card__name">2021 BMW 3 Series 330i</h3>
+              </div>
+              <div class="car-card__tags">
+                <span class="tag">Petrol</span>
+                <span class="tag">Automatic</span>
+                <span class="tag tag--loc">DL / AS NOC</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__pricing">
+                  <span class="car-price">₹34.50 Lakh</span>
+                  <span class="car-emi">EMI: ₹61,200 /m</span>
+                </div>
+                <button type="button" class="car-card__btn" onclick="event.stopPropagation(); openCarModal('car3')">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="car-card car-card-trigger" data-car-id="car4">
+            <div class="car-card__media">
+              <span class="car-card__badge">Certified</span>
+              <button class="car-card__bookmark" aria-label="Bookmark car" onclick="event.stopPropagation(); this.classList.toggle('bookmarked')">🔖</button>
+              <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=700&q=80" alt="2022 Mahindra Thar LX" class="car-card__img" />
+            </div>
+            <div class="car-card__body">
+              <div class="car-card__title-row">
+                <h3 class="car-card__name">2022 Mahindra Thar 4x4</h3>
+              </div>
+              <div class="car-card__tags">
+                <span class="tag">Diesel</span>
+                <span class="tag">Manual</span>
+                <span class="tag tag--loc">AS (Assam)</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__pricing">
+                  <span class="car-price">₹13.90 Lakh</span>
+                  <span class="car-emi">EMI: ₹24,650 /m</span>
+                </div>
+                <button type="button" class="car-card__btn" onclick="event.stopPropagation(); openCarModal('car4')">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="car-card car-card-trigger" data-car-id="car5">
+            <div class="car-card__media">
+              <span class="car-card__badge">Low KM</span>
+              <button class="car-card__bookmark" aria-label="Bookmark car" onclick="event.stopPropagation(); this.classList.toggle('bookmarked')">🔖</button>
+              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80" alt="2020 Honda City ZX" class="car-card__img" />
+            </div>
+            <div class="car-card__body">
+              <div class="car-card__title-row">
+                <h3 class="car-card__name">2020 Honda City ZX</h3>
+              </div>
+              <div class="car-card__tags">
+                <span class="tag">Petrol</span>
+                <span class="tag">CVT Auto</span>
+                <span class="tag tag--loc">AS (Guwahati)</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__pricing">
+                  <span class="car-price">₹9.40 Lakh</span>
+                  <span class="car-emi">EMI: ₹16,700 /m</span>
+                </div>
+                <button type="button" class="car-card__btn" onclick="event.stopPropagation(); openCarModal('car5')">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="car-card car-card-trigger" data-car-id="car6">
+            <div class="car-card__media">
+              <span class="car-card__badge">Top Variant</span>
+              <button class="car-card__bookmark" aria-label="Bookmark car" onclick="event.stopPropagation(); this.classList.toggle('bookmarked')">🔖</button>
+              <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="2023 MG Hector Plus Sharp" class="car-card__img" />
+            </div>
+            <div class="car-card__body">
+              <div class="car-card__title-row">
+                <h3 class="car-card__name">2023 MG Hector Plus</h3>
+              </div>
+              <div class="car-card__tags">
+                <span class="tag">Diesel</span>
+                <span class="tag">Manual</span>
+                <span class="tag tag--loc">AS (Assam)</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__pricing">
+                  <span class="car-price">₹17.60 Lakh</span>
+                  <span class="car-emi">EMI: ₹31,200 /m</span>
+                </div>
+                <button type="button" class="car-card__btn" onclick="event.stopPropagation(); openCarModal('car6')">Details</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="featured-cars__action">
+        <p>Want to sell or list your car in our verified inventory?</p>
+        <a href="#contact" class="btn btn--primary">Park &amp; Sell With Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS & PROBLEM FLOW ============ -->
+  <div class="process-flow-group">
+    <!-- ============ PROBLEM SECTION ============ -->
+    <section class="section problem" id="problem">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__tag">The Problem</p>
+          <h2 class="section__title">Tired of Getting <span class="highlight">Low-Balled</span> on Your Car?</h2>
+          <p class="section__subtitle">Selling a used car the traditional way is frustrating, uncertain, and often unfair.</p>
+        </div>
+        <div class="problem__grid">
+          <div class="problem__card">
+            <div class="problem__icon">📉</div>
+            <h3>Lowball Offers</h3>
+            <p>Secondhand dealers squeeze your budget and profit off your desperation.</p>
+          </div>
+          <div class="problem__card">
+            <div class="problem__icon">🕵️</div>
+            <h3>Shady Middlemen</h3>
+            <p>Middlemen take a cut, inflate prices for buyers, and reduce your actual payout.</p>
+          </div>
+          <div class="problem__card">
+            <div class="problem__icon">😰</div>
+            <h3>Endless Waiting</h3>
+            <p>You list on OLX, get random calls, meet unreliable buyers, and waste weeks.</p>
+          </div>
+          <div class="problem__card">
+            <div class="problem__icon">❓</div>
+            <h3>No Trust</h3>
+            <p>Buyers doubt your car's condition. You can't prove its real health without a certified report.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__tag">How It Works</p>
+          <h2 class="section__title">Sell Your Car in <span class="highlight">4 Simple Steps</span></h2>
+          <p class="section__subtitle">A transparent, hassle-free process from start to finish.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step__number">01</div>
+            <div class="step__icon">🏥</div>
+            <h3 class="step__title">Car Health Checkup</h3>
+            <p class="step__desc">Bring your car to German Motors. Our certified technicians run a comprehensive health inspection and document every detail.</p>
+          </div>
+          <div class="step__connector"></div>
+          <div class="step">
+            <div class="step__number">02</div>
+            <div class="step__icon">💰</div>
+            <h3 class="step__title">Get a Fair Quote</h3>
+            <p class="step__desc">Based on the health report, we provide you a fair market price quote — no hidden charges, no surprises.</p>
+          </div>
+          <div class="step__connector"></div>
+          <div class="step">
+            <div class="step__number">03</div>
+            <div class="step__icon">🅿️</div>
+            <h3 class="step__title">Park & Showcase</h3>
+            <p class="step__desc">Park your vehicle at our secure campus. We showcase it to verified, genuine buyers with the full health report.</p>
+          </div>
+          <div class="step__connector"></div>
+          <div class="step">
+            <div class="step__number">04</div>
+            <div class="step__icon">🤝</div>
+            <h3 class="step__title">Sell & Transfer</h3>
+            <p class="step__desc">Deal directly with the buyer — owner to owner. We handle all the paperwork and ownership transfer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ WHY US ============ -->
+  <section class="section why-us" id="why-us">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">Why German Motors</p>
+        <h2 class="section__title">What Makes Us <span class="highlight">Different</span></h2>
+      </div>
+      <div class="why-us__grid">
+        <div class="why-us__card">
+          <div class="why-us__icon">🔍</div>
+          <h3>Full Transparency</h3>
+          <p>If your car has any fault, we openly mention it to the buyer — along with the estimated repair cost. No hidden surprises.</p>
+        </div>
+        <div class="why-us__card">
+          <div class="why-us__icon">🚫</div>
+          <h3>Zero Middlemen</h3>
+          <p>Direct owner-to-buyer conversation. No agents, no brokers, no commissions eating into your price.</p>
+        </div>
+        <div class="why-us__card">
+          <div class="why-us__icon">🛡️</div>
+          <h3>Secure Parking</h3>
+          <p>Your vehicle stays safe in our secure campus while we find the right buyer. We take care of it like our own.</p>
+        </div>
+        <div class="why-us__card">
+          <div class="why-us__icon">📋</div>
+          <h3>Transfer Assistance</h3>
+          <p>We handle all paperwork — RC transfer, insurance, NOC — so you can focus on just closing the deal.</p>
+        </div>
+        <div class="why-us__card">
+          <div class="why-us__icon">✅</div>
+          <h3>Certified Health Report</h3>
+          <p>Buyers trust a certified checkup report. It gives them clarity and gives you credibility — meaning faster sales.</p>
+        </div>
+        <div class="why-us__card">
+          <div class="why-us__icon">💵</div>
+          <h3>Best Price Guaranteed</h3>
+          <p>Our fair price quote ensures you get what your car truly deserves — backed by data, not guesswork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFITS (SELLER vs BUYER) ============ -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">Benefits</p>
+        <h2 class="section__title">A <span class="highlight">Win-Win</span> for Everyone</h2>
+      </div>
+      <div class="benefits__columns">
+        <div class="benefits__col benefits__col--seller">
+          <h3>🧑‍💼 For Sellers</h3>
+          <ul>
+            <li>✔ Get the best market price for your car</li>
+            <li>✔ No haggling with dealers or middlemen</li>
+            <li>✔ Car safely parked at our campus</li>
+            <li>✔ We showcase your car to genuine buyers</li>
+            <li>✔ Full transfer and paperwork handled</li>
+            <li>✔ Transparent health report builds trust</li>
+          </ul>
+        </div>
+        <div class="benefits__col benefits__col--buyer">
+          <h3>🛒 For Buyers</h3>
+          <div class="bonus-badge">🎁 BONUS — Buy from us &amp; get these FREE!</div>
+          <ul class="bonus-list">
+            <li>🔧 Free First Car Servicing</li>
+            <li>🧹 Free Interior Cleaning</li>
+            <li>🚿 Free Monthly Car Washing</li>
+          </ul>
+          <p class="bonus-tagline">Not just a car — a complete ownership experience. Zero extra charges.</p>
+          <ul>
+            <li>✔ Complete transparency on car's condition</li>
+            <li>✔ Know exact faults &amp; repair costs upfront</li>
+            <li>✔ Direct talk with the actual car owner</li>
+            <li>✔ No inflated middleman pricing</li>
+            <li>✔ Certified health checkup report</li>
+            <li>✔ Confident &amp; informed purchase decision</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">FAQ</p>
+        <h2 class="section__title">Frequently Asked <span class="highlight">Questions</span></h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question">
+            How much does the car health checkup cost?
+            <span class="faq__toggle">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>The health checkup is offered at a minimal fee which is adjusted against the service if you choose to sell through us. Contact us for the latest pricing.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            How long does it take to sell my car?
+            <span class="faq__toggle">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Most cars are sold within 1–2 weeks. Popular models with clean health reports sell even faster — sometimes within days.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Is my car safe at your parking campus?
+            <span class="faq__toggle">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Absolutely. Our campus has 24/7 CCTV surveillance and security personnel. Your vehicle is fully insured while parked with us.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Do you charge any commission on the sale?
+            <span class="faq__toggle">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>We charge a small facilitation fee for the health checkup, parking, and transfer assistance. There are no hidden commissions on the selling price.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            What if my car has major issues?
+            <span class="faq__toggle">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>We transparently disclose all issues along with estimated repair costs. Buyers appreciate this honesty, and it often leads to quicker, trust-based deals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA / CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__wrapper">
+        <div class="contact__info">
+          <p class="section__tag">Get Started</p>
+          <h2 class="section__title section__title--light">Ready to Sell Your Car at the <span class="highlight">Best Price</span>?</h2>
+          <p class="contact__desc">Fill in your details and we'll get back to you with a free estimate. Or just drive in — we're ready when you are.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <span>📍</span>
+              <div>
+                <strong>Visit Us</strong>
+                <p>German Motors, NH 37, opposite Brahmaputra Board,<br/>near Jawa Showroom, Basistha, Guwahati, Assam 781029</p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span>📞</span>
+              <div>
+                <strong>Call Us</strong>
+                <p><a href="tel:07099088508" style="color: inherit; text-decoration: underline;">070990 88508</a></p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span>🕐</span>
+              <div>
+                <strong>Working Hours</strong>
+                <p>Mon – Thu &amp; Sat: 9:00 AM – 6:30 PM<br/>
+                Friday: Open 24 Hours • Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm">
+          <h3>Get a Free Quote</h3>
+          <div class="form__group">
+            <input type="text" id="name" placeholder="Your Full Name" required />
+          </div>
+          <div class="form__group">
+            <input type="tel" id="phone" placeholder="Phone Number" required />
+          </div>
+          <div class="form__group">
+            <input type="text" id="carModel" placeholder="Car Make & Model (e.g. Honda City 2018)" required />
+          </div>
+          <div class="form__group">
+            <input type="number" id="kmDriven" placeholder="Kilometers Driven" />
+          </div>
+          <div class="form__group">
+            <select id="intent" required>
+              <option value="" disabled selected>I want to...</option>
+              <option value="sell">Sell my car</option>
+              <option value="buy">Buy a car</option>
+              <option value="checkup">Get a health checkup only</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--full">Send Enquiry via WhatsApp 💬</button>
+          <p class="form__note">🔒 Instant connection directly with our team on WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="navbar__logo">
+          <img src="image/WhatsApp Image 2026-08-29 at 1.01.24 PM.jpg" alt="German Motors Logo" class="navbar__logo-img footer__logo-img" />
+        </a>
+        <p>Your trusted partner for selling and buying pre-owned cars with full transparency and zero middlemen.</p>
+        <div class="footer__address">
+          <span>📍</span>
+          <p><strong>German Motors</strong><br/>NH 37, opposite Brahmaputra Board, near Jawa Showroom, Basistha, Guwahati, Assam 781029</p>
+        </div>
+        <div class="footer__contact-info">
+          <span>📞</span>
+          <p><strong>Contact Us:</strong> <a href="tel:07099088508" class="footer__phone-link">070990 88508</a></p>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#featured-cars">Featured Cars</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Car Health Checkup</a></li>
+          <li><a href="#">Sell Your Car</a></li>
+          <li><a href="#">Buy Verified Cars</a></li>
+          <li><a href="#">Transfer Assistance</a></li>
+        </ul>
+      </div>
+      <div class="footer__hours">
+        <h4>🕐 Working Hours</h4>
+        <ul class="hours-list">
+          <li><span>Mon – Thu:</span> <strong>9:00 AM – 6:30 PM</strong></li>
+          <li><span>Friday:</span> <strong class="hours-open">Open 24 Hours</strong></li>
+          <li><span>Saturday:</span> <strong>9:00 AM – 6:30 PM</strong></li>
+          <li><span>Sunday:</span> <strong class="hours-closed">Closed</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 German Motors. All rights reserved. | Designed with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ============ CAR DETAIL MODAL POPUP (ELITE-STYLE) ============ -->
+  <div class="car-modal-overlay" id="carModalOverlay">
+    <div class="car-modal" id="carModal" role="dialog" aria-modal="true" aria-labelledby="modalCarTitle">
+      <button class="car-modal__close" id="carModalClose" aria-label="Close details">&times;</button>
+      
+      <div class="car-modal__content">
+        <!-- TOP SECTION: Gallery & Summary Card -->
+        <div class="modal-top-grid">
+          <!-- Left: Big Photo + Thumbnails -->
+          <div class="modal-gallery">
+            <div class="modal-gallery__main">
+              <img id="modalMainImg" src="" alt="Car Image" />
+              <span class="modal-gallery__badge" id="modalBadge">Verified</span>
+            </div>
+            <div class="modal-gallery__thumbs" id="modalThumbs">
+              <!-- Dynamically populated or active thumbnails -->
+            </div>
+          </div>
+
+          <!-- Right: Summary Box -->
+          <div class="modal-summary-box">
+            <h2 class="modal-car-title" id="modalCarTitle">2022 Nissan Kicks XV 1.5</h2>
+            <div class="modal-quick-meta" id="modalQuickMeta">
+              <span>35,000 Km</span> • <span>Petrol</span> • <span>Manual</span>
+            </div>
+
+            <div class="modal-price-card">
+              <div class="modal-price-row">
+                <div class="modal-price-amount" id="modalPrice">₹6,00,000</div>
+                <button class="modal-btn-link" onclick="location.href='#contact'; closeCarModal();">Price Breakup</button>
+              </div>
+              <div class="modal-emi-row">
+                <span id="modalEmiText">Starting EMI: <strong>₹10,617 /m</strong></span>
+                <button class="modal-btn-calc" onclick="document.getElementById('modalEmiSection').scrollIntoView({behavior: 'smooth'})">Calculate your EMI</button>
+              </div>
+            </div>
+
+            <div class="modal-actions-row">
+              <a href="tel:07099088508" class="btn btn--outline-dark btn-call-now">📞 Call Now</a>
+              <a href="#contact" class="btn btn--primary btn-book-now" onclick="closeCarModal();">Book Test Drive</a>
+            </div>
+
+            <div class="modal-health-assurance">
+              <div class="assurance-icon">🛡️</div>
+              <div class="assurance-text">
+                <strong>German Motors Inspection Report</strong>
+                <p>150+ Inspection Points Checked. No major accidental history.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOWER SECTION: Details Grid, Special Points, EMI Calculator & Ownership Benefits -->
+        <div class="modal-bottom-grid">
+          <!-- Left Column -->
+          <div class="modal-info-col">
+            <!-- Car Details Specification Grid -->
+            <div class="modal-card">
+              <h3 class="modal-card-title">Car Detail</h3>
+              <div class="modal-specs-grid" id="modalSpecsGrid">
+                <!-- Dynamically filled with year, km, fuel, transmission, owner, insurance, etc. -->
+              </div>
+            </div>
+
+            <!-- Special about this car -->
+            <div class="modal-card">
+              <h3 class="modal-card-title">Special about this car</h3>
+              <div class="modal-highlight-box" id="modalSpecialBox">
+                <span class="highlight-icon">⭐</span>
+                <div>
+                  <strong>Well Maintained &amp; Certified</strong>
+                  <p id="modalSpecialText">Regularly serviced at authorized centers and kept in pristine condition. Non-accidental, non-meter-tampered guarantee.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ownership Benefits -->
+            <div class="modal-card">
+              <h3 class="modal-card-title">German Motors Ownership Benefits</h3>
+              <div class="modal-perks-row">
+                <div class="perk-item">
+                  <span class="perk-icon">📋</span>
+                  <strong>Transfer</strong>
+                  <span>Guaranteed</span>
+                </div>
+                <div class="perk-item">
+                  <span class="perk-icon">🛡️</span>
+                  <strong>Warranty</strong>
+                  <span>Available</span>
+                </div>
+                <div class="perk-item">
+                  <span class="perk-icon">🚗</span>
+                  <strong>1st Service</strong>
+                  <span>100% Free</span>
+                </div>
+                <div class="perk-item">
+                  <span class="perk-icon">🚿</span>
+                  <strong>Monthly Wash</strong>
+                  <span>Free</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive EMI Calculator -->
+          <div class="modal-emi-col" id="modalEmiSection">
+            <div class="modal-card">
+              <h3 class="modal-card-title">EMI Calculator</h3>
+
+              <div class="emi-slider-group">
+                <div class="slider-header">
+                  <span>Down Payment (₹)</span>
+                  <strong id="sliderDownVal">₹1,50,000</strong>
+                </div>
+                <input type="range" id="emiDownRange" min="50000" max="1000000" step="10000" value="150000" class="emi-slider" />
+              </div>
+
+              <div class="emi-slider-group">
+                <div class="slider-header">
+                  <span>Loan Tenure</span>
+                  <strong id="sliderTenureVal">5 Years (60 Mo)</strong>
+                </div>
+                <input type="range" id="emiTenureRange" min="1" max="7" step="1" value="5" class="emi-slider" />
+              </div>
+
+              <div class="emi-breakdown-card">
+                <div class="emi-dial-wrap">
+                  <div class="emi-donut-circle">
+                    <span class="emi-circle-text">Monthly EMI</span>
+                    <strong class="emi-circle-val" id="calcEmiVal">₹10,617</strong>
+                  </div>
+                </div>
+
+                <div class="emi-details-list">
+                  <div class="emi-detail-row">
+                    <span>Principal Loan:</span>
+                    <strong id="calcPrincipalVal">₹4,50,000</strong>
+                  </div>
+                  <div class="emi-detail-row">
+                    <span>Est. Interest (9.5%):</span>
+                    <strong id="calcInterestVal">₹1,18,000</strong>
+                  </div>
+                  <div class="emi-detail-row total-row">
+                    <span>Total Payment:</span>
+                    <strong id="calcTotalVal">₹5,68,000</strong>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#contact" class="btn btn--primary btn--full modal-finance-btn" onclick="closeCarModal();">
+                Get Finance &amp; Loan Assistance →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
