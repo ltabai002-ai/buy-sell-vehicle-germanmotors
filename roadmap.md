@@ -1,6 +1,6 @@
 # Vehicle inventory upgrade
 
-- [ ] Enable Lovable Cloud as requested.
+- [x] Enable Lovable Cloud as requested.
 - [ ] Approve the inventory implementation plan.
 - [ ] Implement secure inventory management, image storage, and public listings after plan approval.
 - [ ] Provision the initial administrator (requires administrator email).
