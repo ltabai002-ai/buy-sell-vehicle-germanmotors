@@ -3,10 +3,10 @@
 ## Preserve your website
 Keep the existing public design, branding, navigation, typography, vehicle cards, image proportions, and mobile layout. Add vehicle management at `/admin`; do not create a replacement website.
 
-The current project is a static HTML/CSS/JavaScript website with a packaging script and no configured backend visible in its project files. Its original application framework is no longer present, so the upgrade also needs compatible application routing and publishing setup while preserving the existing public presentation.
+The current project is a static HTML/CSS/JavaScript website with a packaging script. Lovable Cloud is now connected as requested; inventory tables and website integration are still to be implemented. Its original application framework is no longer present, so the upgrade also needs compatible application routing and publishing setup while preserving the existing public presentation.
 
 ## What will change
-1. Enable Lovable Cloud for the shared database, administrator sign-in, and image storage. Inspect its existing resources before creating anything to avoid duplicates.
+1. Use the newly connected Lovable Cloud for the shared database, administrator sign-in, and image storage. Inspect its existing resources before creating anything to avoid duplicates.
 2. Set up administrator-only access, disable public self-registration, and provide invitation-based initial administrator provisioning. Never embed passwords or grant administrator access through browser settings.
 3. Create vehicle records, related image records, and dedicated image storage. Keep registration numbers private, with explicit approval required for public display.
 4. Build `/admin` with inventory counts, searchable and paginated listings, publication/availability/fuel/transmission filters, and add/edit/preview/publish/unpublish/sold/archive/delete actions. Require confirmation before deletion.
