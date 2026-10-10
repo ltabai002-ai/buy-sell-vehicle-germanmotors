@@ -14,16 +14,196 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
+      vehicle_images: {
+        Row: {
+          created_at: string
+          display_order: number
+          id: string
+          image_path: string
+          is_primary: boolean
+          vehicle_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_path: string
+          is_primary?: boolean
+          vehicle_id: string
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_path?: string
+          is_primary?: boolean
+          vehicle_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "vehicle_images_vehicle_id_fkey"
+            columns: ["vehicle_id"]
+            isOneToOne: false
+            referencedRelation: "vehicles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      vehicle_private_details: {
+        Row: {
+          approved_public_display: boolean
+          registration_number: string | null
+          vehicle_id: string
+        }
+        Insert: {
+          approved_public_display?: boolean
+          registration_number?: string | null
+          vehicle_id: string
+        }
+        Update: {
+          approved_public_display?: boolean
+          registration_number?: string | null
+          vehicle_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "vehicle_private_details_vehicle_id_fkey"
+            columns: ["vehicle_id"]
+            isOneToOne: true
+            referencedRelation: "vehicles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      vehicles: {
+        Row: {
+          availability: string
+          body_type: string | null
+          created_at: string
+          description: string | null
+          exterior_color: string | null
+          features: string[]
+          fuel_type: string | null
+          id: string
+          inspection_status: string | null
+          insurance_valid_until: string | null
+          is_featured: boolean
+          is_price_negotiable: boolean
+          kilometres_driven: number | null
+          make: string | null
+          manufacturing_year: number | null
+          model: string | null
+          previous_owners: number | null
+          price: number | null
+          primary_image_url: string | null
+          published_at: string | null
+          registration_state: string | null
+          registration_valid_until: string | null
+          service_history_status: string | null
+          short_description: string | null
+          specifications: Json
+          status: string
+          transmission: string | null
+          updated_at: string
+          variant: string | null
+        }
+        Insert: {
+          availability?: string
+          body_type?: string | null
+          created_at?: string
+          description?: string | null
+          exterior_color?: string | null
+          features?: string[]
+          fuel_type?: string | null
+          id?: string
+          inspection_status?: string | null
+          insurance_valid_until?: string | null
+          is_featured?: boolean
+          is_price_negotiable?: boolean
+          kilometres_driven?: number | null
+          make?: string | null
+          manufacturing_year?: number | null
+          model?: string | null
+          previous_owners?: number | null
+          price?: number | null
+          primary_image_url?: string | null
+          published_at?: string | null
+          registration_state?: string | null
+          registration_valid_until?: string | null
+          service_history_status?: string | null
+          short_description?: string | null
+          specifications?: Json
+          status?: string
+          transmission?: string | null
+          updated_at?: string
+          variant?: string | null
+        }
+        Update: {
+          availability?: string
+          body_type?: string | null
+          created_at?: string
+          description?: string | null
+          exterior_color?: string | null
+          features?: string[]
+          fuel_type?: string | null
+          id?: string
+          inspection_status?: string | null
+          insurance_valid_until?: string | null
+          is_featured?: boolean
+          is_price_negotiable?: boolean
+          kilometres_driven?: number | null
+          make?: string | null
+          manufacturing_year?: number | null
+          model?: string | null
+          previous_owners?: number | null
+          price?: number | null
+          primary_image_url?: string | null
+          published_at?: string | null
+          registration_state?: string | null
+          registration_valid_until?: string | null
+          service_history_status?: string | null
+          short_description?: string | null
+          specifications?: Json
+          status?: string
+          transmission?: string | null
+          updated_at?: string
+          variant?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +330,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin"],
+    },
   },
 } as const
