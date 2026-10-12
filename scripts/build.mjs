@@ -1,9 +1,5 @@
-import { cpSync, mkdirSync, rmSync } from 'node:fs';
-
-// Preserve classic scripts and their global handlers, and include local images.
-rmSync('dist', { recursive: true, force: true });
-mkdirSync('dist', { recursive: true });
-for (const path of ['index.html', 'styles.css', 'script.js', 'image']) {
-  cpSync(path, `dist/${path}`, { recursive: true });
-}
-console.log('Static website packaged into dist.');
+import './prepare-public.mjs';
+import { spawnSync } from 'node:child_process';
+// Preserve classic public handlers and image paths while packaging secure app routes.
+const result = spawnSync('bunx', ['vite', 'build'], { stdio: 'inherit' });
+process.exit(result.status ?? 1);
