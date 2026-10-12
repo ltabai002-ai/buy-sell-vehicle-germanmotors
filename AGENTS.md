@@ -1,1 +1,3 @@
-- Package the existing static website with scripts/build.mjs into dist, preserving classic JavaScript globals and image paths because inline HTML handlers depend on them.
+- Package through scripts/build.mjs using TanStack Start; prepare the preserved public HTML, classic JavaScript globals, styles and image paths before development and builds so existing inline handlers keep working alongside secure application routes.
+- Use vehicle_images ordered by display_order as the only gallery and cover source; ignore the legacy primary_image_url to prevent image drift.
+- Serve public vehicle images through a read-only endpoint that rechecks published/available visibility on every request; never expose long-lived signed image URLs for hidden listings.

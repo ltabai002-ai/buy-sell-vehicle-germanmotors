@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 8080",
+    "dev": "node scripts/prepare-public.mjs && vite --host 0.0.0.0 --port 8080",
     "build": "node scripts/build.mjs",
     "build:dev": "node scripts/build.mjs",
-    "typecheck": "node --check script.js",
+    "typecheck": "tsgo --noEmit",
     "preview": "vite preview --host 0.0.0.0 --port 8080"
   },
   "devDependencies": {
